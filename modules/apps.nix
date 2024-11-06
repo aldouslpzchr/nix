@@ -23,6 +23,14 @@
     just
     colima
     direnv
+    (google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
+    k9s
+    kubectl
+    kubernetes-helm
+    terraform
+    gh
+    lazydocker
+    python311
   ];
 
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
@@ -66,6 +74,7 @@
       "ticktick"
       "nikitabobko/tap/aerospace"
       "wezterm"
+      "vivaldi"
     ];
   };
 
