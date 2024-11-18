@@ -21,7 +21,7 @@
     neovim
     vscode
     just
-    colima
+    cargo
     direnv
     (google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
     k9s
@@ -31,6 +31,9 @@
     gh
     lazydocker
     python311
+    python311Packages.virtualenv
+    devbox
+    devcontainer
   ];
 
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
@@ -50,6 +53,7 @@
     taps = [
       "homebrew/services"
       "FelixKratz/formulae"
+      "nikitabobko/tap"
     ];
 
     # `brew install`
@@ -61,11 +65,15 @@
       "httpie" # http client
       "borders" # JankyBorders
       "docker" # docker client
+      "docker-compose" # docker compose client
     ];
 
     # `brew install --cask`
     # TODO Feel free to add your favorite apps here.
     casks = [
+      "jetbrains-toolbox"
+      "orbstack" # to run docker
+      "lastpass"
       "discord"
       "anki"
       "raycast"
@@ -75,6 +83,9 @@
       "nikitabobko/tap/aerospace"
       "wezterm"
       "vivaldi"
+      "sublime-text"
+      "neovide"
+      "parsec"
     ];
   };
 
