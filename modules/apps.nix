@@ -66,6 +66,8 @@
       "borders" # JankyBorders
       "docker" # docker client
       "docker-compose" # docker compose client
+      "terraformer"
+      "terraform-docs"
     ];
 
     # `brew install --cask`
