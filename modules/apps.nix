@@ -34,6 +34,7 @@
     python311Packages.virtualenv
     devbox
     devcontainer
+    postgresql_16
   ];
 
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
@@ -88,6 +89,7 @@
       "sublime-text"
       "neovide"
       "parsec"
+      "flameshot"
     ];
   };
 
