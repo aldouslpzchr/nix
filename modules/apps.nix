@@ -30,11 +30,15 @@
     terraform
     gh
     lazydocker
-    python311
-    python311Packages.virtualenv
+    # python311
+    # python311Packages.virtualenv
     devbox
     devcontainer
     postgresql_16
+    zoxide
+    helix
+    jira-cli-go
+    coreutils-full
   ];
 
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
@@ -55,6 +59,7 @@
       "homebrew/services"
       "FelixKratz/formulae"
       "nikitabobko/tap"
+      "databricks/tap"
     ];
 
     # `brew install`
@@ -69,6 +74,10 @@
       "docker-compose" # docker compose client
       "terraformer"
       "terraform-docs"
+      "awscli"
+      "python@3.12"
+      "poetry"
+      "databricks"
     ];
 
     # `brew install --cask`
@@ -90,6 +99,8 @@
       "neovide"
       "parsec"
       "flameshot"
+      "ghostty"
+      "vlc"
     ];
   };
 
@@ -102,21 +113,24 @@
       font-awesome
       corefonts
       meslo-lgs-nf
-      (nerdfonts.override {
-        fonts = [
-          "FiraCode"
-          "Hack"
-          "DroidSansMono"
-          "Meslo"
-          "Hack"
-          "Iosevka"
-          "IosevkaTerm"
-          "JetBrainsMono"
-          "ComicShannsMono"
-          "CodeNewRoman"
-          "FantasqueSansMono"
-        ];
-      })
+      nerd-fonts.fira-code
+      nerd-fonts.hack
+      nerd-fonts.droid-sans-mono
+      nerd-fonts.meslo-lg
+      nerd-fonts.hack
+      nerd-fonts.iosevka
+      nerd-fonts.iosevka-term
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.comic-shanns-mono
+      nerd-fonts.code-new-roman
+      nerd-fonts.fantasque-sans-mono
+      nerd-fonts.caskaydia-cove
+      ia-writer-quattro
+      ia-writer-duospace
+      atkinson-hyperlegible
+      crimson-pro
+      cabin
+      sn-pro
     ];
   };
 }

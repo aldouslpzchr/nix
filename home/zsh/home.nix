@@ -1,5 +1,7 @@
-{ pkgs, hostname, ... }:
-let
+{
+  pkgs,
+  ...
+}: let
   initExtra = ''
     export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
     source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
@@ -10,11 +12,32 @@ let
     }
     bindkey -s '^o' 'lfcd\n'
     bindkey -s '^O' 'lfcd\n'
+    eval "$(zoxide init zsh)"
   '';
-in
-{
+in {
   programs = {
+    starship = {
+      enable = true;
+      # Configuration written to ~/.config/starship.toml
+      settings = {
+        aws = {
+          disabled = true;
+        };
+        gcloud = {
+          disabled = true;
+        };
+        # add_newline = false;
+
+        # character = {
+        #   success_symbol = "[➜](bold green)";
+        #   error_symbol = "[➜](bold red)";
+        # };
+
+        # package.disabled = true;
+      };
+    };
     zsh = {
+      # zprof.enable = true;
       enable = true;
       autosuggestion.enable = true;
       #      syntaxHighlighting.enable = true;
@@ -25,16 +48,16 @@ in
       };
       initExtra = initExtra;
       plugins = [
-        {
-          name = "powerlevel10k";
-          src = pkgs.zsh-powerlevel10k;
-          file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-        }
-        {
-          name = "powerlevel10k-config";
-          src = ./p10k-config;
-          file = "p10k.zsh";
-        }
+        # {
+        #   name = "powerlevel10k";
+        #   src = pkgs.zsh-powerlevel10k;
+        #   file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+        # }
+        # {
+        #   name = "powerlevel10k-config";
+        #   src = ./p10k-config;
+        #   file = "p10k.zsh";
+        # }
         {
           name = "zsh-nix-shell";
           file = "nix-shell.plugin.zsh";

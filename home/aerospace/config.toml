@@ -213,6 +213,10 @@ if.app-id = 'org.mozilla.firefox'
 run = "move-node-to-workspace B"
 
 [[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+run = "move-node-to-workspace B"
+
+[[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
 run = "move-node-to-workspace S"
 
