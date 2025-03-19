@@ -13,7 +13,11 @@ return {
 	{ import = "astrocommunity.pack.python-ruff" },
 	{ import = "astrocommunity.pack.terraform" },
 
+	{ import = "astrocommunity.search.nvim-spectre" },
+	-- { import = "astrocommunity.pack.markdown" },
+
 	-- { import = "astrocommunity.pack.go" },
 	{ import = "astrocommunity.motion.mini-surround" },
+	{ import = "astrocommunity.motion.flash-nvim" },
 	-- import/override with your plugins folder
 }

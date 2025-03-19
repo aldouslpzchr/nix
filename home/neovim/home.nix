@@ -24,13 +24,15 @@ in {
     file = {
       ".config/nvim/lua" = {
         enable = true;
-        source = link ./nvim-astronvim/lua;
+        # source = link ./nvim-astronvim/lua;
+        source = link ./lazyvim/lua;
         recursive = true;
         target = ".config/nvim/lua";
       };
       ".config/nvim/init.lua" = {
         enable = true;
-        source = link ./nvim-astronvim/init.lua;
+        # source = link ./nvim-astronvim/init.lua;
+        source = link ./lazyvim/init.lua;
         # recursive = true;
         target = ".config/nvim/init.lua";
       };
