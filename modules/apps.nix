@@ -39,6 +39,7 @@
     helix
     jira-cli-go
     coreutils-full
+    yazi
   ];
 
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
@@ -78,6 +79,10 @@
       "python@3.12"
       "poetry"
       "databricks"
+      "lazygit"
+      "uv"
+      "temporal"
+      "pixi"
     ];
 
     # `brew install --cask`
